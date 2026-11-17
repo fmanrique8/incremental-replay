@@ -6,6 +6,8 @@ shows $75.00.**
 Incremental Replay runs an actual dbt model across local snapshots and points
 to the first batch and key where the persisted table differs from a rebuild.
 
+Companion article [When dbt tests pass and revenue is still wrong](https://fmanrique.com/blog/when-dbt-tests-pass-and-revenue-is-still-wrong/).
+
 ## Five-minute walkthrough
 
 Start in the repository root, the folder containing `pyproject.toml`. You need
