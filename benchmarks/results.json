@@ -1,0 +1,797 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-17T21:02:00.354190+00:00",
+  "seeds": [
+    271,
+    379,
+    487
+  ],
+  "modes": [
+    "fixed",
+    "broken_merge",
+    "strict_watermark",
+    "skip_current_batch",
+    "shared_amount"
+  ],
+  "jobs": 3,
+  "timeout_seconds": 120,
+  "versions": {
+    "dbt-core": "1.11.17",
+    "dbt-duckdb": "1.10.1",
+    "duckdb": "1.5.6",
+    "python": "3.12.13",
+    "os": "Windows"
+  },
+  "summary": {
+    "even": {
+      "eligible_fault_cases": 9,
+      "caught": 8,
+      "detection_rate": 0.8888888888888888,
+      "by_fault": {
+        "broken_merge": {
+          "cases": 3,
+          "caught": 3
+        },
+        "strict_watermark": {
+          "cases": 3,
+          "caught": 3
+        },
+        "skip_current_batch": {
+          "cases": 3,
+          "caught": 2
+        }
+      },
+      "median_delay_batches": 1.0,
+      "clean_cases": 3,
+      "clean_false_alarms": 0,
+      "median_seconds": 45.667
+    },
+    "risk": {
+      "eligible_fault_cases": 9,
+      "caught": 7,
+      "detection_rate": 0.7777777777777778,
+      "by_fault": {
+        "broken_merge": {
+          "cases": 3,
+          "caught": 3
+        },
+        "strict_watermark": {
+          "cases": 3,
+          "caught": 3
+        },
+        "skip_current_batch": {
+          "cases": 3,
+          "caught": 1
+        }
+      },
+      "median_delay_batches": 0,
+      "clean_cases": 3,
+      "clean_false_alarms": 0,
+      "median_seconds": 35.403
+    }
+  },
+  "runs": [
+    {
+      "seconds": 50.908,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 271,
+      "mode": "fixed",
+      "policy": "even"
+    },
+    {
+      "seconds": 55.046,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 271,
+      "mode": "fixed",
+      "policy": "risk"
+    },
+    {
+      "seconds": 51.163,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        5,
+        7,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 271,
+      "mode": "broken_merge",
+      "policy": "risk"
+    },
+    {
+      "seconds": 54.554,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        6,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 271,
+      "mode": "broken_merge",
+      "policy": "even"
+    },
+    {
+      "seconds": 50.923,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        6,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 271,
+      "mode": "strict_watermark",
+      "policy": "even"
+    },
+    {
+      "seconds": 54.5,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        5,
+        7,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 271,
+      "mode": "strict_watermark",
+      "policy": "risk"
+    },
+    {
+      "seconds": 47.053,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        2
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 271,
+      "mode": "skip_current_batch",
+      "policy": "risk"
+    },
+    {
+      "seconds": 45.667,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        2
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 271,
+      "mode": "skip_current_batch",
+      "policy": "even"
+    },
+    {
+      "seconds": 46.784,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [
+        3,
+        6,
+        8
+      ],
+      "first_detection_delay": null,
+      "seed": 271,
+      "mode": "shared_amount",
+      "policy": "even"
+    },
+    {
+      "seconds": 45.704,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [
+        5,
+        7,
+        8
+      ],
+      "first_detection_delay": null,
+      "seed": 271,
+      "mode": "shared_amount",
+      "policy": "risk"
+    },
+    {
+      "seconds": 46.672,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        4,
+        8
+      ],
+      "truth_drift_steps": [],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 379,
+      "mode": "fixed",
+      "policy": "risk"
+    },
+    {
+      "seconds": 45.98,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 379,
+      "mode": "fixed",
+      "policy": "even"
+    },
+    {
+      "seconds": 50.477,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        3,
+        6,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 379,
+      "mode": "broken_merge",
+      "policy": "even"
+    },
+    {
+      "seconds": 35.403,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        4,
+        8
+      ],
+      "truth_drift_steps": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        3,
+        4,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 379,
+      "mode": "broken_merge",
+      "policy": "risk"
+    },
+    {
+      "seconds": 49.773,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        4,
+        8
+      ],
+      "truth_drift_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        3,
+        4,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 379,
+      "mode": "strict_watermark",
+      "policy": "risk"
+    },
+    {
+      "seconds": 35.156,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        3,
+        6,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 379,
+      "mode": "strict_watermark",
+      "policy": "even"
+    },
+    {
+      "seconds": 49.758,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        6
+      ],
+      "detected_steps": [
+        6
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 379,
+      "mode": "skip_current_batch",
+      "policy": "even"
+    },
+    {
+      "seconds": 35.248,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        4,
+        8
+      ],
+      "truth_drift_steps": [
+        6
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 379,
+      "mode": "skip_current_batch",
+      "policy": "risk"
+    },
+    {
+      "seconds": 33.796,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        4,
+        8
+      ],
+      "truth_drift_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [
+        3,
+        4,
+        8
+      ],
+      "first_detection_delay": null,
+      "seed": 379,
+      "mode": "shared_amount",
+      "policy": "risk"
+    },
+    {
+      "seconds": 33.296,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [
+        3,
+        6,
+        8
+      ],
+      "first_detection_delay": null,
+      "seed": 379,
+      "mode": "shared_amount",
+      "policy": "even"
+    },
+    {
+      "seconds": 34.196,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 487,
+      "mode": "fixed",
+      "policy": "even"
+    },
+    {
+      "seconds": 33.592,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": null,
+      "seed": 487,
+      "mode": "fixed",
+      "policy": "risk"
+    },
+    {
+      "seconds": 33.997,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        5,
+        7,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 487,
+      "mode": "broken_merge",
+      "policy": "risk"
+    },
+    {
+      "seconds": 33.496,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        6,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 487,
+      "mode": "broken_merge",
+      "policy": "even"
+    },
+    {
+      "seconds": 32.118,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        6,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 487,
+      "mode": "strict_watermark",
+      "policy": "even"
+    },
+    {
+      "seconds": 32.319,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [
+        5,
+        7,
+        8
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 487,
+      "mode": "strict_watermark",
+      "policy": "risk"
+    },
+    {
+      "seconds": 32.377,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        6,
+        7
+      ],
+      "detected_steps": [
+        7
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 1,
+      "seed": 487,
+      "mode": "skip_current_batch",
+      "policy": "risk"
+    },
+    {
+      "seconds": 32.22,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        6,
+        7
+      ],
+      "detected_steps": [
+        6
+      ],
+      "reference_disagrees_with_oracle": [],
+      "first_detection_delay": 0,
+      "seed": 487,
+      "mode": "skip_current_batch",
+      "policy": "even"
+    },
+    {
+      "seconds": 32.632,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        3,
+        6,
+        8
+      ],
+      "truth_drift_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [
+        3,
+        6,
+        8
+      ],
+      "first_detection_delay": null,
+      "seed": 487,
+      "mode": "shared_amount",
+      "policy": "even"
+    },
+    {
+      "seconds": 32.385,
+      "replay_builds": 8,
+      "reference_builds": 3,
+      "checked_steps": [
+        5,
+        7,
+        8
+      ],
+      "truth_drift_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "detected_steps": [],
+      "reference_disagrees_with_oracle": [
+        5,
+        7,
+        8
+      ],
+      "first_detection_delay": null,
+      "seed": 487,
+      "mode": "shared_amount",
+      "policy": "risk"
+    }
+  ]
+}

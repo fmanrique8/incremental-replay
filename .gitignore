@@ -1,0 +1,12 @@
+.venv/
+.ruff_cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.duckdb
+*.duckdb.wal
+dist/
+target/
+logs/
+replay-report.json
+.user.yml

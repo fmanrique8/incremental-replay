@@ -1,0 +1,22 @@
+project: ../orders
+model: fct_orders
+key: [order_id]
+sources:
+  raw.orders:
+    order_id: BIGINT
+    order_date: DATE
+    updated_at: TIMESTAMP
+    amount_cents: BIGINT
+vars:
+  mode: strict_watermark
+steps:
+  - name: initial orders
+    snapshots:
+      raw.orders: ../late-correction/start.csv
+    vars:
+      as_of: '2026-03-11T00:00:00'
+  - name: correction ties the high-water mark
+    snapshots:
+      raw.orders: updated.csv
+    vars:
+      as_of: '2026-03-12T00:00:00'

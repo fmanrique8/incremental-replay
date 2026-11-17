@@ -1,0 +1,19 @@
+version: 2
+unit_tests:
+  - name: late_correction_emits_correct_merge_row
+    model: fct_orders
+    overrides:
+      macros:
+        is_incremental: true
+    given:
+      - input: source('raw', 'orders')
+        rows:
+          - {order_id: 42, order_date: '2026-03-01', updated_at: '2026-03-14 12:00:00', amount_cents: 7500}
+          - {order_id: 43, order_date: '2026-03-10', updated_at: '2026-03-10 12:00:00', amount_cents: 2000}
+      - input: this
+        rows:
+          - {order_id: 42, order_date: '2026-03-01', updated_at: '2026-03-01 12:00:00', amount_cents: 10000}
+          - {order_id: 43, order_date: '2026-03-10', updated_at: '2026-03-10 12:00:00', amount_cents: 2000}
+    expect:
+      rows:
+        - {order_id: 42, order_date: '2026-03-01', updated_at: '2026-03-14 12:00:00', amount_cents: 7500}

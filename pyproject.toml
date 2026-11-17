@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "incremental-replay"
+version = "0.1.0"
+description = "Compare real dbt incremental builds with clean DuckDB rebuilds."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+dependencies = [
+    "dbt-core>=1.10,<1.12",
+    "dbt-duckdb>=1.10,<1.11",
+    "duckdb>=1.4,<2",
+    "pyyaml>=6,<7",
+]
+
+[project.scripts]
+dbt-replay = "incremental_replay.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.13,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
